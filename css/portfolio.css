@@ -1,0 +1,420 @@
+body{
+    padding:0;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+
+}
+.container{
+    width:80%;
+    margin:auto;
+    box-sizing:border-box;
+    overflow: hidden;
+}
+
+
+.hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu{
+    display: none;
+}
+html, body{
+    height: 100%;
+}
+.wrapper{
+    min-height:100%;
+}
+.main{
+    padding-bottom: 150px;
+}
+.footer{
+    align-items: center;
+    height: 150;
+    margin-top: -150px;
+    clear: both;
+}
+
+i{
+    /* font-size: 100px; */
+    color:#333;
+}
+
+/*navabar styling*/
+
+.navContainer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+.navbar ul {
+    display:flex;
+    text-decoration: none;
+    list-style: none;
+    margin-top:25px;
+}
+
+.navbar li {
+    margin:0 0 0 30px;
+    font-size:22px;
+}
+
+.navbar ul a{
+    text-decoration:none;
+    color:#333399;
+}
+
+.navbar a:hover{
+    color:#999933;
+}
+
+nav .currentPage{
+    border-bottom: #333399 2px solid;
+}
+
+/*ending of nav styling*/
+
+.borderSection{
+    background-color:#333399;
+    color:#333399;
+    padding: 3px;
+    margin-bottom:50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.smile{
+    text-align: center;
+    margin-top: 40px;
+}
+.smile i{
+    animation: pulse 2s linear;   
+}
+
+@keyframes pulse{
+    0%{
+        transform: rotate(0deg) scale(0.5);
+    }
+    10%{
+        transform: rotate(0deg) scale(0.6);
+
+    }
+    20%{
+        transform: rotate(0deg) scale(0.7);
+
+    }
+    30%{
+        transform: rotate(0deg) scale(0.8);
+
+    }
+    40%{
+        transform: rotate(0deg) scale(0.9);
+
+    }
+    50%{
+        transform: rotate(0deg) scale(1);
+
+    }
+    60%{
+        transform: rotate(0deg) scale(1.1);
+
+    }
+    70%{
+        transform: rotate(0deg) scale(1.0);
+
+    }
+}
+i{
+    /* font-size:500px; */
+    color:#333;
+}
+.smile span {
+    color:red;
+}
+h1{
+    color:#333;
+}
+
+
+/*footer*/
+
+footer li{
+    list-style: none;
+}
+
+.footerLinks i, .footerLinks li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+}
+.footerLinks ul li a:hover{
+    color:#999933;
+}
+
+.footerLinks p{
+    color:white;
+    padding-top: 50px;
+}
+
+.footerFlex{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLinks{
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+
+footer{
+    margin-top:50px;
+   background-color: #333399;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+
+@media(max-width : 768px){
+    #navContainer,
+    .expectImages,
+    .newsOutlet .container,
+    .footerFlex{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .footerLinks{
+        text-align: center;
+    }
+
+    .footerLinks p{
+        margin: 0;
+        padding: 0;
+    }
+    footer ul{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+@media(max-width: 768px){
+   
+    .expectImages,
+    .newsOutlet .container,
+    .footerFlex{
+        display:flex;
+        flex-direction: column;
+    }
+    .container{
+        width: 90%;
+    }
+
+    .displayTimesButton{
+        height: 100%;
+    }
+    .wrapperMenu{
+        min-height:100%;
+    }
+    .mainMenu{
+        padding-bottom: 60px;
+    }
+    .footerLinksMenuList{
+        align-items: center;
+        position: relative;
+        height: 60;
+        margin-top: -60px;
+        clear: both;
+    }
+    .logo img, .logoPush img{
+        width: 100px;
+        height: auto;
+    }
+    .logoPush{
+    margin: 10px 0 0 30px;
+  }
+
+    .smile i{
+        max-width: 100%;
+    }
+    .hamburger i{
+        color:#333399;
+    }
+    .times i{
+        color:red;
+        background-color: white;
+        margin: 25px 20px 0 0;
+        float:right;
+    }
+    .footerLinks{
+        text-align: center;
+    }
+    .footerLinks p{
+        margin: 0;
+        padding: 0;
+    }
+    footer ul{
+        margin: 0;
+        padding: 0;
+    }
+    .footerLinks i, .footerLinks li a{
+        font-size: 16px;
+    }
+    .text h1{
+        font-size: 16px;
+    }
+    .hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu{
+        display: contents;
+    }
+    .navbar{
+        display:none;
+    }
+    .navContainer{
+        display: flex;
+        justify-content: space-between;
+        height: 107px;
+    }
+    .removeNavContainer{
+        height:0;
+        overflow:hidden;
+    }
+    .timesButton{
+        position: fixed;
+        background-color: white;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        transition-property:transform;
+        transform:translate(-100%);
+        transition-duration: 1s;
+        transition-timing-function:ease-out;
+    }
+    .displayTimesButton{
+        position: fixed;
+        background:white;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition-property: transform;
+        transform: translate(0);
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+    .times i{
+        transition-property:transform;
+        transition-duration: 1s;
+    }
+     .times i:hover{
+        transform:rotate(540deg);
+    }
+    .hamburger i{
+        animation-name:hamburger;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes hamburger{
+
+        0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1);
+          }
+
+    }
+          /* Navbar for menu */
+        .logoPush{
+            margin: 10px 0 0 30px;
+        }   
+        .navbarForMenu ul {
+            display:flex;
+            flex-direction: column;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        .navbarForMenu li {
+            margin:0 30px 0 0;
+            font-size:16px;
+            margin:20px;
+        }
+        
+        .navbarForMenu ul a{
+            text-decoration:none;
+            color:#333399;
+            display:block;
+        }
+        
+        .navbarForMenu a:hover{
+            color:#999933;
+        }
+        .navbarForMenu .currentPage{
+            border-bottom:0;
+        }
+
+        /*Nav animation*/
+
+         .navbarForMenu li a{
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        .navbarForMenu li a:hover{
+            margin-left: 5px;
+        } 
+        .navbarForMenu li a:active{
+            margin-left: 5px;
+        } 
+
+        .navbarForMenu li a:hover{
+            animation-name: bignav;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .navbarForMenu li a:active{
+            animation-name: bignav;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bignav{
+            0% {
+                background-color:#333399; color:white; transform: scale(1); padding: 5px;
+            }
+            100% {
+                background-color:#333399; color:white; transform: scale(1.2); padding: 5px;
+            }
+        }
+        
+
+        /*footer link*/
+        .footerLinksMenuList{
+            align-items: center;
+            justify-content: center;
+        }
+        .footerLinksMenu li{
+            list-style: none;
+        }
+        .footerLinksMenu ul{
+            display:flex;
+        }
+        .footerLinksMenu i{
+            color:#333399;
+            padding:20px;
+        }
+    @media(min-width: 400px){
+        .displayTimesButton{
+            width: 400px;
+        }
+    }
+}
+
+
+
