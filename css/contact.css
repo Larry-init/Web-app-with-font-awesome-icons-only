@@ -129,7 +129,7 @@ form{
     margin-right:20px;
 }
 .messageForm button{
-    font-size:18px;
+    font-size:15px;
     border:0;
     width:100px;
     height:35px;
@@ -240,7 +240,7 @@ footer{
         color:#333399;
     }
     .logo img, .logoPush img{
-        width: 100px;
+        width: 70px;
         height: auto;
     }
     .logoPush{
@@ -267,6 +267,9 @@ footer{
         margin: 0;
         padding: 0;
     }
+    .footerLinks ul li span{
+        font-size: 10;
+    }
     footer ul{
         margin: 0;
         padding: 0;
@@ -280,7 +283,8 @@ footer{
     .navContainer{
         display: flex;
         justify-content: space-between;
-        height: 107px;
+        height: 70px;
+        margin-bottom: 0;
     }
     .removeNavContainer{
         height:0;
@@ -465,4 +469,10 @@ footer{
     }
     .messageForm textarea{max-width: 100%}
     .messageForm button{width: 100%}
+    .contactDetails p, form{
+        font-size: 14px;
+    }
+    .contactDetails h1{
+        font-size: 16px;
+    }
 }

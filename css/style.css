@@ -16,7 +16,7 @@ body{
 i{
     color:#333;
 }
-.hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu{
+.hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu, .mobile{
     display: none;
 }
 
@@ -85,7 +85,7 @@ nav .currentPage{
 
 
 /* welcome */
-.link, .sectionOne, .sectionTwo{
+.link, .sectionOne, .sectionTwo, .responsive{
     text-align: center;
 }
 
@@ -256,10 +256,10 @@ footer{
         margin: 25px 20px 0 0;
         float:right;
     }
-    
 /* reediting the mobile version */
+
     .sub h1{
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 0;
         text-align: center;
     }
@@ -279,22 +279,23 @@ footer{
         padding:10px 5px;
         border-radius: 5px; 
     }
-    #firstDisplay h1{font-size: 18px;}
+    #firstDisplay h1{font-size: 16px;}
     .offered, .whyChooseUs, .whoAreWe {
         font-size: 18px;
     }
     .sectionOne p, .responsive p, .sectionTwo p{
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 0;
         padding-bottom:0;
     }
     .offered h1, .whyChooseUs h1, .whoAreWe h1 {
+        font-size: 18px;
         margin-top: 1px;
         margin-bottom: 0;
         padding-bottom:0;
     }
     .footerLinks i, .footerLinks li a{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     form{
@@ -314,22 +315,22 @@ footer{
         margin: 0;
         padding: 0;
     }
-    .hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu{
+    .hamburger, .times, .logoForMenu, .navbarForMenu, .footerLinksMenu, .mobile{
         display: contents;
     }
-    .navbar{
-        display:none;
+    .navbar, .desktop{
+        display: none;
     }
     .navContainer{
         display: flex;
         justify-content: space-between;
-        height: 107px;
+        height: 70px;
+        margin-bottom: 0;
     }
     .removeNavContainer{
         height:0;
         overflow:hidden;
     }
-    
     .timesButton{
         position: fixed;
         background-color: white;
@@ -382,7 +383,7 @@ footer{
     }
           /* New addition */
         .logo img, .logoPush img{
-              width: 100px;
+              width: 70px;
               height: auto;
         }
         .logoPush{
@@ -489,5 +490,10 @@ footer{
             width: 400px;
         }
     }
+
+            /* Further reviews */
+            .expectImages h1{
+                font-size: 16px;
+            }
 }
 
