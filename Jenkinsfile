@@ -1,26 +1,21 @@
 pipeline {
+
     agent any
 
     stages {
-        stage('Git') {
-            steps {
-                echo 'Hello World'
+        stage(build) {
+            steps{
+                sh 'npm i'
             }
         }
-        stage('Docker') {
-            steps {
-                echo 'Hello World'
+        stage (inject Variable){
+            steps{
+                withCredentials([file(credentialsId: 'file', variable: 'PIPELINE_ENV')]) { load "$PIPELINE_ENV"}
+                sh 'echo ${appsettings} | base64 --decode > .env'
+                sh 'ls -a'
+                    
+                }
             }
-        }
-        stage('Jenkins') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Ansible') {
-            steps {
-                echo 'Hello World'
-            }
+            
         }
     }
-}
