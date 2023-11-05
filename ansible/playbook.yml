@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: true
+  remote_user: madeniji
+  vars_files: ./vars/vars.yml
+  roles:
+    - deployer

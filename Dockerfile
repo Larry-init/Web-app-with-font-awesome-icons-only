@@ -1,4 +1,4 @@
-FROM node:16 AS builder
+FROM nginx:latest AS builder
 
 WORKDIR /app
 
