@@ -9,7 +9,13 @@ pipeline {
                 sh "pwd && ls -lart"
             }
         }
+        stage("Send Report"){
+            steps{
+                slackSend channel: '#general', message: 'Hello Work'
+            }
+        }
         
-    }    
+    }
+
     
 }
