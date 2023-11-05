@@ -14,6 +14,12 @@ pipeline {
                 slackSend channel: '#general', message: 'Hello Work'
             }
         }
+        stage ("run command"){
+            steps{
+                sh "chmod 775 ./py/run.sh"
+                sh "./run.sh"
+            }
+        }
         
     }
 
