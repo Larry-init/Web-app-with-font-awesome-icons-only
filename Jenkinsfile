@@ -9,13 +9,7 @@ pipeline {
                 sh "pwd && ls -lart"
             }
         }
-
-        stage("build"){
-            steps{
-                sh "docker build -t webapp ."
-            }
-        }
         
     }    
     
-    }
+}
