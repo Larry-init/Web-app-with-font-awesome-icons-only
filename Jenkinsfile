@@ -2,7 +2,7 @@ pipeline {
 
     agent any
 
-    Stages {
+    stages {
         stage("fuck around"){
             steps{
                 echo "find out"
