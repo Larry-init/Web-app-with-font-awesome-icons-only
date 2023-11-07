@@ -1,6 +1,10 @@
 pipeline {
 
-    agent any
+    agent {
+        dockerfile{
+            dir 'jenkins/Dockerfile'
+        }
+    }
 
     stages {
         stage("fuck around"){
