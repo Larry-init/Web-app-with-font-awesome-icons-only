@@ -17,7 +17,8 @@ pipeline {
         stage ("run command"){
             steps{
                 sh "ls -lart"
-                sh "./py/run.sh"
+                sh "chmod +x ./py/run.sh"
+                sh "sh "./py/run.sh""
             }
         }
         
