@@ -1,10 +1,11 @@
 pipeline {
 
-    agent {
-        dockerfile {
-            dir'jenkins/'
-        }
-    }
+    agent { dockerfile true }
+    // agent {
+    //     dockerfile {
+    //         dir'jenkins/'
+    //     }
+    // }
 
     stages {
         stage("fuck around"){
