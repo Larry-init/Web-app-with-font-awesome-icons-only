@@ -2,7 +2,7 @@ pipeline {
 
     agent {
         dockerfile {
-            filename 'docker/'
+            dir'jenkins/'
         }
     }
 
