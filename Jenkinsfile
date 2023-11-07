@@ -18,7 +18,7 @@ pipeline {
             steps{
                 sh "ls -lart"
                 sh "chmod +x ./py/run.sh"
-                sh "sh "./py/run.sh""
+                sh "./py/run.sh"
             }
         }
         
