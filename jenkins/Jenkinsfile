@@ -14,17 +14,17 @@ pipeline {
                 sh "pwd && ls -lart"
             }
         }
-        stage("Send Report"){
-            steps{
-                slackSend channel: '#general', message: 'Hello Work'
-                slackUploadFile './py/log.html'
-            }
-        }
         stage ("run command"){
             steps{
                 sh "ls -lart"
                 sh "chmod 775 ./py/run.sh"
                 sh "py/run.sh"
+            }
+        }
+        stage("Send Report"){
+            steps{
+                slackSend channel: '#general', message: 'Hello Work'
+                slackUploadFile './py/log.html'
             }
         }
         
