@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 ./py/scrap.py > ./log.html || echo "Big error"
+python3 ./py/scrap.py > ./py/log.html || echo "Big error"
