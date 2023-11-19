@@ -24,7 +24,7 @@ pipeline {
         stage("Send Report"){
             steps{
                 slackSend channel: '#general', message: 'Hello Work'
-                slackUploadFile './py/log.html'
+                slackUploadFile 'py/log.html'
             }
         }
         
