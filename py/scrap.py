@@ -14,6 +14,6 @@ username = 'pocket'
 password = 'pocket'
 
 response=requests.get(url, auth=(username, password)).text
-soup=BeautifulSoup(response,'lxml')
-console=soup.find('pre',class_='console-output').text
+soup=BeautifulSoup(response,'html.parser')
+console=soup.find('pre',class_='console-output').prettify()
 print(console)
