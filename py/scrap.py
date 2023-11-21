@@ -1,7 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
+import argparse
 
-url='http://192.168.43.247:8080/job/Web-app-with-font-awesome-icons-only/job/master/10/console'
+parser = argparse.ArgumentParser(description='This helps to pass variables using the cli')
+parser.add_argument('buildurl', action='store', type=str, help='Enters the build url')
+args = parser.parse_args()
+buildurl=args.buildurl
+
+url=buildurl+'/console'
 username = 'pocket'
 password = 'pocket'
 

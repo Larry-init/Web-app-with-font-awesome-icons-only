@@ -1,32 +1,86 @@
-Started by user pocket
-19:19:43 Connecting to https://api.github.com using larry-init/****** (For Github Integration)
-Obtained Jenkinsfile from 2cb62c16072513f4fa38d3387545a7812da8ab6e
+Started by user unknown or anonymous
+Replayed #23
+19:38:01 Connecting to https://api.github.com using larry-init/******
+Obtained jenkins/Jenkinsfile from f862dab09456911653c20751484bb3b91b75de2e
 [Pipeline] Start of Pipeline
 [Pipeline] node
-Running on Jenkins in /var/jenkins_home/workspace/h-font-awesome-icons-only_master
+Running on Jenkins in /var/jenkins_home/workspace/myyg_master
 [Pipeline] {
 [Pipeline] stage
 [Pipeline] { (Declarative: Checkout SCM)
 [Pipeline] checkout
 The recommended git tool is: NONE
-using credential 72dde919-cd13-4854-8379-05c702a732e0
- > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/h-font-awesome-icons-only_master/.git # timeout=10
+using credential auth
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/myyg_master/.git # timeout=10
 Fetching changes from the remote Git repository
  > git config remote.origin.url https://github.com/Larry-init/Web-app-with-font-awesome-icons-only.git # timeout=10
 Fetching without tags
 Fetching upstream changes from https://github.com/Larry-init/Web-app-with-font-awesome-icons-only.git
  > git --version # timeout=10
  > git --version # 'git version 2.39.2'
-using GIT_ASKPASS to set credentials For Github Integration
+using GIT_ASKPASS to set credentials 
  > git fetch --no-tags --force --progress -- https://github.com/Larry-init/Web-app-with-font-awesome-icons-only.git +refs/heads/master:refs/remotes/origin/master # timeout=10
-Checking out Revision 2cb62c16072513f4fa38d3387545a7812da8ab6e (master)
+Checking out Revision f862dab09456911653c20751484bb3b91b75de2e (master)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f 2cb62c16072513f4fa38d3387545a7812da8ab6e # timeout=10
-Commit message: "Jenkinsfile"
- > git rev-list --no-walk 8fa25748bcc6c653542a826dff72515b875c43b8 # timeout=10
+ > git checkout -f f862dab09456911653c20751484bb3b91b75de2e # timeout=10
+Commit message: "dockerfile"
+ > git rev-list --no-walk f862dab09456911653c20751484bb3b91b75de2e # timeout=10
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t a0d67e055b2e80cd850ccf43a9832961edca4957 -f jenkins/Dockerfile jenkins
+#1 [internal] load build definition from Dockerfile
+#1 sha256:568beda69190a6a8f9a7c5d0dd59f03b862fea259b1ccd58d8b4aacbcd5fbf5b
+#1 transferring dockerfile: 166B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 sha256:e042e73414b8371020e921a5d65f7f2cbbfeac2587ca79eae8716cd15faa5827
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/node:16
+#3 sha256:610eab6e9f76616c9c0f60b4851b2a244653192467fefd6dce2b0bb21f58fa9e
+#3 DONE 2.0s
+
+#6 [1/3] FROM docker.io/library/node:16@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b
+#6 sha256:135b7090e2a6e35cb7883668caa6ee9a12798b2d8fd645aca759dbb2bea9a4de
+#6 DONE 0.0s
+
+#5 [2/3] RUN apt-get update && apt-get install python3 python3-pip -y
+#5 sha256:77683af2e071358955cc2fcb55d914cc15b7bc17c8d4371b97f6d36ea17258cb
+#5 CACHED
+
+#4 [3/3] RUN pip3 install beautifulsoup4 requests lxml
+#4 sha256:27b87660a502a380ead61d9068dcce67e697b03d08ee66ff14cd36574ed5d00c
+#4 CACHED
+
+#7 exporting to image
+#7 sha256:e9cd4f8ec21b1c72d4d16229df63b2d19889ebc67364ab1b23117e49e87e77f7
+#7 exporting layers done
+#7 writing image sha256:76ec31e7fd913bdc7ec85f34cfcd2624c9b77c99093680fe4ca6efc946ce177f done
+#7 naming to docker.io/library/a0d67e055b2e80cd850ccf43a9832961edca4957:latest done
+#7 DONE 0.0s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ docker inspect -f . a0d67e055b2e80cd850ccf43a9832961edca4957
+.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 96fccb97065f554f0687ccfb6fa491a9f6df9b5e9f9890970d4b0d8a959f051a
+$ docker run -t -d -u 1000:1000 -v /var/run/docker.sock:/var/run/docker.sock -w /var/jenkins_home/workspace/myyg_master --volumes-from 96fccb97065f554f0687ccfb6fa491a9f6df9b5e9f9890970d4b0d8a959f051a -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** a0d67e055b2e80cd850ccf43a9832961edca4957 cat
+$ docker top cb51e6b3fcb8bfa2a3ff5b64456f38868be62ae7b27b661e3dfe73a74bc92841 -eo pid,comm
 [Pipeline] {
 [Pipeline] stage
 [Pipeline] { (fuck around)
@@ -34,41 +88,79 @@ Commit message: "Jenkinsfile"
 find out
 [Pipeline] sh
 + pwd
-/var/jenkins_home/workspace/h-font-awesome-icons-only_master
+/var/jenkins_home/workspace/myyg_master
 + ls -lart
-total 80
-drwxr-xr-x 6 jenkins jenkins  4096 Nov  5 19:11 ..
--rw-r--r-- 1 jenkins jenkins     0 Nov  5 19:11 status
--rw-r--r-- 1 jenkins jenkins  5031 Nov  5 19:11 portfolio.html
-drwxr-xr-x 2 jenkins jenkins  4096 Nov  5 19:11 js
--rw-r--r-- 1 jenkins jenkins 13466 Nov  5 19:11 index.html
-drwxr-xr-x 2 jenkins jenkins  4096 Nov  5 19:11 images
--rw-r--r-- 1 jenkins jenkins     0 Nov  5 19:11 git
-drwxr-xr-x 2 jenkins jenkins  4096 Nov  5 19:11 css
--rw-r--r-- 1 jenkins jenkins  7337 Nov  5 19:11 contact.html
-drwxr-xr-x 4 jenkins jenkins  4096 Nov  5 19:11 ansible
--rw-r--r-- 1 jenkins jenkins  6368 Nov  5 19:11 about.html
--rw-r--r-- 1 jenkins jenkins   186 Nov  5 19:11 READ.md
--rw-r--r-- 1 jenkins jenkins    98 Nov  5 19:11 Dockerfile
--rw-r--r-- 1 jenkins jenkins   347 Nov  5 19:19 Jenkinsfile
-drwxr-xr-x 8 jenkins jenkins  4096 Nov  5 19:19 .git
-drwxr-xr-x 7 jenkins jenkins  4096 Nov  5 19:19 .
+total 88
+-rw-r--r-- 1 node node     0 Nov 19 07:01 status
+-rw-r--r-- 1 node node  5031 Nov 19 07:01 portfolio.html
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 js
+-rw-r--r-- 1 node node 13466 Nov 19 07:01 index.html
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 images
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 css
+-rw-r--r-- 1 node node  7337 Nov 19 07:01 contact.html
+drwxr-xr-x 4 node node  4096 Nov 19 07:01 ansible
+-rw-r--r-- 1 node node  6368 Nov 19 07:01 about.html
+-rw-r--r-- 1 node node   186 Nov 19 07:01 READ.md
+-rw-r--r-- 1 node node    98 Nov 19 07:01 Dockerfile
+drwxr-xr-x 7 node node  4096 Nov 19 07:01 ..
+-rw-r--r-- 1 node node    13 Nov 19 10:28 .gitignore
+drwxr-xr-x 9 node node  4096 Nov 19 10:28 .
+-rw-r--r-- 1 node node     0 Nov 19 10:28 log.html
+drwxr-xr-x 2 node node  4096 Nov 19 11:13 jenkins
+drwxr-xr-x 2 node node  4096 Nov 20 19:38 py
+drwxr-xr-x 8 node node  4096 Nov 20 19:38 .git
+[Pipeline] sh
++ echo http://192.168.43.247:8082/job/myyg/job/master/24/
+http://192.168.43.247:8082/job/myyg/job/master/24/
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (run command)
+[Pipeline] sh
++ ls -lart
+total 88
+-rw-r--r-- 1 node node     0 Nov 19 07:01 status
+-rw-r--r-- 1 node node  5031 Nov 19 07:01 portfolio.html
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 js
+-rw-r--r-- 1 node node 13466 Nov 19 07:01 index.html
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 images
+drwxr-xr-x 2 node node  4096 Nov 19 07:01 css
+-rw-r--r-- 1 node node  7337 Nov 19 07:01 contact.html
+drwxr-xr-x 4 node node  4096 Nov 19 07:01 ansible
+-rw-r--r-- 1 node node  6368 Nov 19 07:01 about.html
+-rw-r--r-- 1 node node   186 Nov 19 07:01 READ.md
+-rw-r--r-- 1 node node    98 Nov 19 07:01 Dockerfile
+drwxr-xr-x 7 node node  4096 Nov 19 07:01 ..
+-rw-r--r-- 1 node node    13 Nov 19 10:28 .gitignore
+drwxr-xr-x 9 node node  4096 Nov 19 10:28 .
+-rw-r--r-- 1 node node     0 Nov 19 10:28 log.html
+drwxr-xr-x 2 node node  4096 Nov 19 11:13 jenkins
+drwxr-xr-x 2 node node  4096 Nov 20 19:38 py
+drwxr-xr-x 8 node node  4096 Nov 20 19:38 .git
+[Pipeline] sh
++ chmod 775 ./py/run.sh
+[Pipeline] sh
++ py/run.sh
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
 [Pipeline] { (Send Report)
 [Pipeline] slackSend
-Slack Send Pipeline step running, values are - baseUrl: <empty>, teamDomain: TeamCham, channel: #general, color: <empty>, botUser: true, tokenCredentialId: slack-token, notifyCommitters: false, iconEmoji: <empty>, username: <empty>, timestamp: <empty>
+Slack Send Pipeline step running, values are - baseUrl: <empty>, teamDomain: TeamCham, channel: #general, color: <empty>, botUser: true, tokenCredentialId: 80168041-9fa8-4c70-b450-1c7e8cb74ee2, notifyCommitters: false, iconEmoji: <empty>, username: <empty>, timestamp: <empty>
+[Pipeline] slackUploadFile
+Using dirname=/var/jenkins_home/workspace/myyg_master and includeMask=py/log.html
+Adding file /var/jenkins_home/workspace/myyg_master/py/log.html
 [Pipeline] }
 [Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 cb51e6b3fcb8bfa2a3ff5b64456f38868be62ae7b27b661e3dfe73a74bc92841
+$ docker rm -f --volumes cb51e6b3fcb8bfa2a3ff5b64456f38868be62ae7b27b661e3dfe73a74bc92841
+[Pipeline] // withDockerContainer
 [Pipeline] }
 [Pipeline] // withEnv
 [Pipeline] }
 [Pipeline] // node
 [Pipeline] End of Pipeline
-
-Could not update commit status, please check if your scan credentials belong to a member of the organization or a collaborator of the repository and repo:status scope is selected
-
 
 GitHub has been notified of this commit’s build result
 
