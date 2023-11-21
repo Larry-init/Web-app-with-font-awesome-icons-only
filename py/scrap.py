@@ -15,5 +15,5 @@ password = 'pocket'
 
 response=requests.get(url, auth=(username, password)).text
 soup=BeautifulSoup(response,'lxml')
-console_output=soup.find('pre',class_='word-wrap').text
+console_output=soup.find('pre',style_='word-wrap').text
 print(console_output)
