@@ -21,13 +21,14 @@ pipeline {
                 sh "py/run.sh"
             }
         }
-        stage("Send Report"){
-            steps{
+        
+    }
+
+    post {
+        always {
                 slackSend channel: '#general', message: 'Hello Work'
                 slackUploadFile 'py/log.html'
-            }
         }
-        
     }
 
     
