@@ -8,7 +8,7 @@ args = parser.parse_args()
 buildurl=args.buildurl
 
 
-url=f"{buildurl}/console"
+url=f"{buildurl}/consoleText"
 
 username = 'pocket'
 password = 'pocket'
