@@ -13,8 +13,7 @@ url=f"{buildurl}/console"
 username = 'pocket'
 password = 'pocket'
 
-response=requests.get(url, auth=(username, password))
-url=response.text
+response=requests.get(url, auth=(username, password)).text
 soup=BeautifulSoup(url,'lxml')
 console=soup.find('pre',class_='console-output').text
 print(console)
