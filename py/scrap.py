@@ -7,7 +7,10 @@ parser.add_argument('--buildurl', action='store', type=str, help='Enters the bui
 args = parser.parse_args()
 buildurl=args.buildurl
 
+print(buildurl)
+
 url=f"{buildurl}/console"
+print(url)
 username = 'pocket'
 password = 'pocket'
 
