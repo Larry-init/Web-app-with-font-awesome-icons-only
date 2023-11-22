@@ -18,5 +18,5 @@ soup=BeautifulSoup(response,'lxml')
 
 print(soup.prettify())
 
-console_output=soup.find('pre',class_="console-output")
-print(console_output.text)
+# console_output=soup.find('pre',class_="console-output")
+# print(console_output.text)

@@ -8,10 +8,15 @@ pipeline {
     }
 
     stages {
-        stage("fuck around"){
+        stage("find out"){
             steps{
                 echo "find out"
                 sh "pwd && ls -lart"
+            }
+        }
+        stage("Dockerize the project"){
+            steps{
+                sh 'docker run'
             }
         }
         
