@@ -14,22 +14,26 @@ pipeline {
                 sh "pwd && ls -lart"
             }
         }
-        stage("Dockerize the project"){
-            steps{
-                sh 'docker run'
-            }
-        }
         
     }
 
     post {
-        always {
+        success {
                 script{
                 sh "ls -lart"
                 sh "chmod 775 ./py/run.sh"
                 sh "py/run.sh"
             }
-                slackSend channel: '#general', message: 'Hello Work'
+                slackSend channel: '#general', message: 'SUCCESSFUL'
+                slackUploadFile 'py/log.html'
+        }
+        failure {
+                script{
+                sh "ls -lart"
+                sh "chmod 775 ./py/run.sh"
+                sh "py/run.sh"
+            }
+                slackSend channel: '#general', message: 'FAILED'
                 slackUploadFile 'py/log.html'
         }
     }
