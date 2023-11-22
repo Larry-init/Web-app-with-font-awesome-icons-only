@@ -8,7 +8,7 @@ args = parser.parse_args()
 buildurl=args.buildurl
 
 
-url=f"{buildurl}/console"
+url=f"{buildurl}/consoleText"
 
 username = 'pocket'
 password = 'pocket'
@@ -16,7 +16,7 @@ password = 'pocket'
 response=requests.get(url, auth=(username, password)).text
 soup=BeautifulSoup(response,'lxml')
 print(buildurl)
-#print(soup.prettify())
+print(soup.prettify())
 
-console_output=soup.find('pre',class_="console-output")
-print(console_output.text)
+# console_output=soup.find('pre',class_="console-output")
+# print(console_output.text)
