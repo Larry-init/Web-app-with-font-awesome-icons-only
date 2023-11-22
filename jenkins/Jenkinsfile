@@ -14,18 +14,16 @@ pipeline {
                 sh "pwd && ls -lart"
             }
         }
-        stage ("run command"){
-            steps{
-                sh "ls -lart"
-                sh "chmod 775 ./py/run.sh"
-                sh "py/run.sh"
-            }
-        }
         
     }
 
     post {
         always {
+                script{
+                sh "ls -lart"
+                sh "chmod 775 ./py/run.sh"
+                sh "py/run.sh"
+            }
                 slackSend channel: '#general', message: 'Hello Work'
                 slackUploadFile 'py/log.html'
         }
