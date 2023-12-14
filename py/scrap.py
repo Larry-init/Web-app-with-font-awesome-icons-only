@@ -23,7 +23,7 @@ headers = {'Authorization': f'Bearer {api_token}'}
 #response=requests.get(url, auth=(username, password)).text
 
 # Make a request to the Jenkins job consoleText endpoint
-response = requests.get(url, headers=headers).text
+response = requests.get(url, headers=headers)
 if response.status_code == 200:
     soup=BeautifulSoup(response,'lxml')
     print(buildurl)
