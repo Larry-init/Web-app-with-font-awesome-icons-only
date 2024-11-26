@@ -33,7 +33,7 @@ pipeline {
                 sh "chmod 775 ./py/run.sh"
                 sh "py/run.sh"
             }
-                slackSend channel: '#general', message: 'FAILED-To-DELIVER'
+                slackSend channel: '#general', message: 'FAILED'
                 slackUploadFile 'py/log.html'
         }
     }
